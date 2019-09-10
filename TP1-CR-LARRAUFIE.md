@@ -1,3 +1,8 @@
+LARRAUFIE TOM
+COMPTE RENDU TP1 ADMIN SYSTEM
+10/09/2019
+
+
 # Exercice 2. Prise en main de l’interpréteur de commandes
 
 ## Manuel 
@@ -276,11 +281,11 @@ Plusieurs commandes existent pour afficher seulement les lignes nécessaire a no
 **head -n**   affiche les n premières lignes.
 **tail -n**    affiche les n dernières lignes.
 
-**Pour afficher les 5 premières lignes on utilise:**
-```head -5 /var/log/syslog```
-**Pour afficher les 15 dernières lignes on utilise:**
-```tail -15 /var/log/syslog```
-**Pour afficher les lignes 10 à 20:**
+**Pour afficher les 5 premières lignes on utilise:**\
+```head -5 /var/log/syslog```\
+**Pour afficher les 15 dernières lignes on utilise:**\
+```tail -15 /var/log/syslog```\
+**Pour afficher les lignes 10 à 20:**\
 ```sed -n '10,20p' /var/log/syslog```
 
 ### 15. Que fait la commande dmesg | less? 
@@ -306,6 +311,7 @@ Pour connaitre le nombre d'utilisateurs connectés on peut utiliser les commande
 ### 19. Combien de pages de manuel comportent le mot-clé conversion dans leur description ? 
 Pour trouver le nombre de pages qui comportent le mot-clé **conversion** dans leur description, on utilise la commande suivante:
 ```man -k conversion```
+
 **resultat de la commande:**
 >4 pages comportent le mot-clé conversion dans leur resumé.
 
@@ -349,21 +355,23 @@ Nano est un éditeur de texte rudimentaire, où toutes les commandes évidemment
  • M-U signifie **ALT+U**
 
 Quelques raccourcis utiles :
-| Raccourci |Description   |
+| Raccourci |Description   
 |--|--|
-| F1 ou Ctrl + G |  Aﬀichage de l’aide  |
-| Ctrl + X |  Quitter nano / Fermer une fenêtre / Exécuter une commande  |
-| Ctrl + R |  Ouvrir un fichier  |
-| Ctrl + O | Enregistrer sous   |
-| Ctrl + S | Enregistrer   |
-| Ctrl + K | Couper   |
-| Ctrl + U |  Coller  |
-| Ctrl + W | Rechercher  |
-|Ctrl + \  |  Remplacer  |
-| Ctrl + C | Aﬀicher des informations sur la position du curseur (numéro de ligne, de colonne)  |
-| Alt + U  |  Annuler  |
-|Alt + E  | Refaire   |
-
+| F1 ou Ctrl + G |  Aﬀichage de l’aide  
+| Ctrl + X |  Quitter nano / Fermer une fenêtre / Exécuter une commande  
+| Ctrl + R |  Ouvrir un fichier  
+| Ctrl + O | Enregistrer sous   
+| Ctrl + S | Enregistrer   
+| Ctrl + K | Couper   
+| Ctrl + U |  Coller  
+| Ctrl + W | Rechercher  
+|Ctrl + \  |  Remplacer  
+| Ctrl + C | Aﬀicher des informations sur la position du curseur (numéro de ligne, de colonne)  
+| Alt + U  |  Annuler  
+|Alt + E  | Refaire   
 
 # Exercice 4. Personnalisation du shell 
  
+ Création d'une copie du fichier ~/.bashrc_bak avec la commande suivante:
+ ```cp ~/.bashrc .bashrc_bak```
+Ensuite on utilise la commande **source .bashrc** pour éviter de se déconnecter et se reconnecter pour pouvoir afficher les couleurs dans l'invite de commande.
