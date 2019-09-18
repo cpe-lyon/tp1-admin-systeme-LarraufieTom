@@ -1,3 +1,4 @@
+
 LARRAUFIE Tom
 
 3A ICS
@@ -118,6 +119,11 @@ tom@serveur:~/script$ echo $PATH
 
 ### Exercice 2. Contrôle de mot de passe Écrivez un script testpwd.sh qui demande de saisir un mot de passe et vérifie s’il correspond ou non au contenu d’une variable PASSWORD dont le contenu est codé en dur dans le script. Le mot de passe saisi par l’utilisateur ne doit pas s’afficher.
 
+Pour commencer, création du script:
+**tom@serveur:~/script$ touch testpwd.sh**
+
+Ensuite nous devons rendre le script exécutable avec la commande suivante:
+**tom@serveur:~/script$ chmod u+x testpdw.sh**
 ``` 
 #!/bin/bash
 PASSWORD=123 # variable avec le mot de passe en dur à tester
@@ -157,6 +163,8 @@ fi
 ```
 Il affichera un message d’erreur dans le cas contraire
 
+On utilise la fonction donné, l'utilisateur appelle le script avec une valeur en paramètre.
+Cette valeur est alors analysé par la fonction qui retourne un **1** si la valeur n'est pas un réel et un **0** sinon.
 ```
 #!/bin/bash
 function is_number()
@@ -206,6 +214,11 @@ done
 echo "L'utilisateur $1 n'existe pas"
 exit
 ```
+
+**user=$(cat /etc/passwd | cut -d : -f1 | sort | head -n $i | tail -n 1)**
+Cette commande permet d'extraire la première colonne en coupant le reste au premier séparateur **:**, ce qui permet ensuite de comparé chaque utilisateur à celui entré en paramètre.
+Car la variable $i dans la commande nous sert d'indice et permet de parcourir tout les utilisateurs qui sont ressorti du tri.
+
 **Si le script est appelé sans nom :**
 >tom@serveur:~/script$ bash user.sh
 Utilisation : user.sh nom_utilisateur
