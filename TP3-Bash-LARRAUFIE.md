@@ -161,3 +161,17 @@ Puis on appuis sur **OK**
 Puis sur **YES**
 
 **Vérifiez qu’un nouveau fichier a été créé dans /etc/apt/sources.list.d. Que contient-il ?**
+
+>tom@serveur:~$ cd /etc/apt/sources.list.d
+tom@serveur:/etc/apt/sources.list.d$ ls
+linuxuprising-ubuntu-java-disco.list
+tom@serveur:/etc/apt/sources.list.d$ nano linuxuprising-ubuntu-java-disco.list
+
+
+Le nouveau fichier qui a été crée contient un lien vers une plateforme de mise à jour afin de faire la maintenance de la version d'oracle installé.
+
+Il va se connecter sur le lien puis rentrer dans le main.
+
+
+># deb-src http://ppa.launchpad.net/linuxuprising/java/ubuntu disco main
+
